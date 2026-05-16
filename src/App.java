@@ -39,8 +39,7 @@ public class App {
             System.out.print("Ingrese la calificacion del estudiante " + i + ": ");
             notaTotal += cs.nextInt();
         }
-        System.out.println(Calculadora.Division(notaTotal, cantidadEstudiantes)); //se llama al metodo Division de la clase calculadora
-        cs.close();
+        System.out.println("El promedio de es: " + Calculadora.Division(notaTotal, cantidadEstudiantes)); //se llama al metodo Division de la clase calculadora
     }
 
     //metodo para crear matriz 3x3
@@ -48,6 +47,7 @@ public class App {
         Scanner leer = new Scanner(System.in);
         int[][] matriz = new int[3][3];
 
+        System.out.println("Ingrese los elementos de la matriz: ");
         //solicita al usuario los numeros que compondran la matriz
         for (int i = 0; i < 3; i++) {
             for (int k = 0; k < 3; k++) {
@@ -55,6 +55,7 @@ public class App {
             }
         }
 
+        System.out.println("Matriz resultante: ");
         //imprime la matriz
         for (int i = 0; i < 3; i++) {
             for (int k = 0; k < 3; k++) {
@@ -62,9 +63,9 @@ public class App {
             }
             System.out.println();
         }
-        leer.close(); //cierra el Scanner
     }
     public static void main(String[] args) {
+
 
         Scanner leer = new Scanner(System.in);
         int num; 
@@ -86,7 +87,7 @@ public class App {
                     11. salir de la aplicacion
                     """);
 
-            System.out.print("Seleccione una opccion del menu: ");
+            System.out.print("Seleccione una opcion del menu: ");
             int opcion = leer.nextInt(); //lee y guarda en la variable 'opcion' la opcion seleccionada  
 
             switch (opcion) {
@@ -131,7 +132,7 @@ public class App {
                     break;
                 case 4:
                     System.out.println("CONTADOR DE VOCALES");
-
+                    leer.nextLine(); //limpia el buffer
                     System.out.print("Ingrese una cadena de caracteres: ");
                     String cadena = leer.nextLine();
 

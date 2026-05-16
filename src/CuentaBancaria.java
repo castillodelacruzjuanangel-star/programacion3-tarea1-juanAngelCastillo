@@ -53,6 +53,5 @@ public class CuentaBancaria {
 
         System.out.print("Saldo: ");
         setSaldo(leer.nextDouble());
-        leer.close();
     }
 }
